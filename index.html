@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validacao de Formularios</title>
+<script>
+function validacaoForm() {
+
+  let nome = document.forms["myForm"]["cpNome"].value;
+  let sobrenome = document.forms["myForm"]["cpSobrenome"].value;
+  let email = document.forms["myForm"]["cpEmail"].value;
+
+  if (nome == "") {
+    alert("Campo Nome deve ser preenchido.");
+    return false;
+  }
+  if (sobrenome == "") {
+    alert("Campo Sobrenome deve ser preenchido.");
+    return false;
+  }
+  if (email == "") {
+    alert("Campo Email deve ser preenchido.");
+    return false;
+  }
+}
+</script>
+</head>
+
+<body>
+
+<h2>Formulário: </h2>
+
+<form name="myForm" action="destino/index.html" onsubmit="return validacaoForm()" method="post">
+
+  Nome: <input type="text" name="cpNome">
+  
+  <br>
+  <br>
+  
+  Sobrenome: <input type="text" name="cpSobrenome">
+  
+  <br>
+  <br>
+  
+  Email: <input type="text" name="cpEmail">
+  
+  <br>
+  <br>
+  
+  <input type="submit" value="Click to submit">
+
+</form>
+
+</body>
+</html>
